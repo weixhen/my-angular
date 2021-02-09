@@ -1,0 +1,10 @@
+<div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Comfirmation</h4>
+</div>
+<div class="modal-body"> 
+    <label><span style="color: #df841b; font-size: 22px;"><fa-icon [icon]="faExclamationTriangle"></fa-icon></span><span class="space"></span>{{confirm_message}}</label>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-secondary" (click)="close('cancel')">{{cancel_button_text}}</button>
+    <button type="button" class="btn btn-primary" (click)="close('yes')">{{yes_button_text}}</button>
+</div>

@@ -1,0 +1,11 @@
+<div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">{{title}}</h4>
+</div>
+<div class="modal-body">
+    <label *ngIf="show_success"><span style="color: #1add34; font-size: 22px;"><fa-icon [icon]="faCheckCircle"></fa-icon></span><span class="space"></span>{{success_message}}</label>
+    <label *ngIf="show_warning"><span style="color: #df841b; font-size: 22px;"><fa-icon [icon]="faExclamationTriangle"></fa-icon></span><span class="space"></span>{{warning_message}}</label>
+    <label *ngIf="show_info"><span style="color: #2889e4; font-size: 22px;"><fa-icon [icon]="faInfoCircle"></fa-icon></span><span class="space"></span>{{info_message}}</label>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-secondary" (click)="close()">Close</button>
+</div>

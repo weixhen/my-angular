@@ -1,0 +1,29 @@
+<div class="search-panel">
+    <div class="col-12 row">
+        <div class="col-2">
+            <label>Name</label>
+            <ng-select [items]="users" 
+                bindLabel="name" 
+                bindValue="id" 
+                [(ngModel)]="selected_user"
+                placeholder="Select">
+            </ng-select>
+        </div>
+        <div class="col-2" style="padding-top: 25px;">
+            <button class="btn btn-secondary" type="reset" (click)='reset()'>Reset</button>
+            <span class="space"></span>
+            <button class="btn btn-primary" type="submit" (click)='search()'>Search</button>
+        </div>
+    </div>
+</div>
+
+<ag-grid-angular
+    style="width: 60%; height: 500px;"
+    class="ag-theme-balham-dark"
+    [rowData]="rowData"
+    [columnDefs]="columnDefs"
+    [defaultColDef]="defaultColDef"
+    [enableCellTextSelection]="true"
+    [frameworkComponents]="frameworkComponents"
+>
+</ag-grid-angular>
